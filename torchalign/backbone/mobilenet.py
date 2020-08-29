@@ -63,7 +63,7 @@ class MobileNetV2(nn.Module):
         c2 = self.features[:4](x)
         c3 = self.features[4:7](c2)
         c4 = self.features[7:14](c3)
-        kwargs = {'size': c2.shape[-2:],'mode': 'bilinear'}
+        kwargs = {'size': c2.shape[-2:],'mode': 'bilinear','align_corners': False}
         return torch.cat([F.interpolate(xx,**kwargs) for xx in [c2,c3,c4]], 1)
 
 
