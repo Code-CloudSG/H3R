@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ## Demo
 ````bash
 export PYTHONPATH=./:$PYTHONPATH
-python examples/demo.py --image data/demo.jpg --model models/wflw/p1/hrnet18/256x256/
+python examples/demo.py --image data/demo.jpg --model models/wflw/hrnet18_256x256_p2/
 ````
 
 ## Test on WFLW
