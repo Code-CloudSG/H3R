@@ -8,7 +8,7 @@
 
 This repo contains the facial landmark detection code for "Heatmap Regression via Randomized Rounding".
 
-![demo image](data/selfie.jpg.png)
+![demo image](data/figure.png)
 
 ## Get Started
 
