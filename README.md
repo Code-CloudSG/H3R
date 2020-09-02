@@ -1,7 +1,7 @@
 # Heatmap Regression via Randomized Rounding
 ----
 
-**[2020/07/27]**: the paper is available on [ArXiv]().
+**[2020/09/02]**: the paper is available on [ArXiv](https://arxiv.org/abs/2009.00225).
 
 
 ## Introduction
@@ -45,7 +45,7 @@ python examples/test.py --model models/wflw/hrnet18_256x256_p1/
 @article{yu2020heatmap,
   title   = {Heatmap Regression via Randomized Rounding},
   author  = {Yu, Baosheng and Tao, Dacheng},
-  journal= {arXiv preprint arXiv:},
+  journal= {arXiv preprint arXiv:2009.00225},
   year={2020}
 }
 ```
