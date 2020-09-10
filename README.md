@@ -38,6 +38,8 @@ python examples/test.py --model models/wflw/hrnet18_256x256_p1/
 | HRNet-W18 | P2 | 256x256 | 9.69M | 4.84G | 3.95 |
 | MobileNetV2 | P2 | 256x256 | 0.60M | 0.51G | 4.45 |
 | MobileNetV2 | P2 | 160x160 | 0.60M | 0.20G | 4.58 |
+| MobileNetV2 | P2 | 128x128 | 0.60M | 0.13G | 4.72 |
+
 
 ## Citation
 
