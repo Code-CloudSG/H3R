@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 
-__all__ = [  'hrnet18', 'hrnet32' ]
+__all__ = [ 'hrnet18s', 'hrnet18', 'hrnet32' ]
 
 
 def conv3x3(in_planes, out_planes, stride=1):
@@ -384,6 +384,19 @@ class HighResolutionNet(nn.Module):
         }
         return torch.cat([F.interpolate(y,**kwargs) for y in y_list], 1)
 
+def hrnet18s(pretrained=True, **kwargs):
+    model = HighResolutionNet(
+        num_modules = [1, 1, 3, 2],
+        num_branches = [1, 2, 3, 4],
+        block = [Bottleneck, BasicBlock, BasicBlock, BasicBlock],
+        num_blocks = [(2,), (2,2), (2,2,2), (2,2,2,2)],
+        num_channels = [(64,), (18,36), (18,36,72), (18,36,72,144)],
+        fuse_method = ['SUM', 'SUM', 'SUM', 'SUM'],
+        **kwargs
+    )
+    if pretrained:
+        model.load_state_dict(model_zoo.load_url(model_urls['hrnet_w18s']), strict=False)
+    return model
 
 def hrnet18(pretrained=False, **kwargs):
     model = HighResolutionNet(
