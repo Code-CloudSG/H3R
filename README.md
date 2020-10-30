@@ -27,7 +27,7 @@ python examples/demo.py --image data/demo.jpg --model models/wflw/hrnet18_256x25
 python examples/test_wflw.py --model models/wflw/hrnet18_256x256_p1/
 ````
 
-| Backbone | BBox | Resolution | #Params | GFLOPs | NME (%)| 
+| Backbone | BBox | Resolution | #Params | FLOPs | NME (%)| 
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | HRNet-W18 | P1 | 256x256 | 9.69M | 4.84G | 3.81 |
 | HRNet-W18 | P2 | 256x256 | 9.69M | 4.84G | 3.95 |
@@ -42,7 +42,7 @@ python examples/test_wflw.py --model models/wflw/hrnet18_256x256_p1/
 python examples/test_lapa.py --model models/lapa/hrnet18_256x256_p2/
 ````
 
-| Backbone | BBox | Resolution | #Params | GFLOPs | NME (%)|
+| Backbone | BBox | Resolution | #Params | FLOPs | NME (%)|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | HRNet-W18 | P2 | 256x256 | 9.69M | 4.86G | 1.40 |
 | MobileNetV2 | P2 | 256x256 | 0.60M | 0.52G | 1.69 |
